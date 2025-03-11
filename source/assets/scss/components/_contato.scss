@@ -1,0 +1,148 @@
+.contato {
+    --bg-contato: #fff;
+    --msg-load-color-1: #00000033;
+    --msg-load-color-2: #00000080;
+    --msg-btn-bg: #000;
+    --msg-btn-color: #fff;
+
+    background: var(--bg-contato);
+    position: relative;
+
+    .container {
+        max-width: 520px;
+    }
+
+    &-form-tit {
+        font-size: 23px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        font-weight: 500;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 35px;
+        }
+    }
+
+    &-form-subtit {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    &-form-check {
+        margin-top: 25px;
+    }
+}
+
+.form {
+    position: relative;
+
+    &-group {
+        padding-bottom: 15px;
+        position: relative;
+    }
+
+    &-label {
+        span {
+            font-size: 80%;
+        }
+    }
+
+    &-control {
+        background-clip: initial;
+        background-size: 18px auto !important;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+        -webkit-text-fill-color: $input-color;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    .invalid-feedback {
+        position: absolute;
+        text-align: right;
+        bottom: -3px;
+    }
+
+    .btn-form {
+        margin-top: 5px;
+        width: 100%;
+        height: 50px;
+        border: none;
+        background: $primary;
+        color: #fff;
+    }
+}
+
+.box-mensagem {
+    background: var(--bg-contato);
+    height: calc(100% + 20px);
+    width: calc(100% + 20px);
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    left: - 10px;
+    top: -10px;
+    position: absolute;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    &-ativo {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &-load {
+        --load-color: #000;
+
+        font-size: 15px;
+        text-align: center;
+
+        &::before {
+            animation: rotateLoad .4s linear infinite;
+            border: 3px solid var(--msg-load-color-1);
+            border-bottom: 3px solid var(--msg-load-color-2);
+            border-radius: 50%;
+            content: "";
+            height: 40px;
+            width: 40px;
+        }
+
+        &::after {
+            content: 'enviando...';
+            display: block;
+            padding-top: 15px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &-ok {
+        padding: 20px;
+        text-align: center;
+    }
+
+    &-tit {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    &-texto {
+        display: block;
+        padding: 20px 0;
+        font-size: 14px;
+
+    }
+
+    .btn {
+        padding: 8px 20px;
+        border: none;
+        background: var(--msg-btn-bg);
+        color: var(--msg-btn-color);
+    }
+}

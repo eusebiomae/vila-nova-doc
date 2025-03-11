@@ -1,0 +1,24 @@
+<div class="modal-contato" data-modal-contato="telefone">
+    <div class="modal-contato-scroll">
+        <div class="container">
+            
+            <h3 class="modal-contato-tit">
+                <img src="images/logo.png" alt="<%= nome %>">
+                Solicite uma ligação
+            </h3>
+
+            <%
+            form_nome = 'formModalTelefone';
+            form_prefixo = 'FMT';
+            form_tipo = 'Telefone';
+            form_canal = 'mensagem';
+            form_btn = 'solicitar ligação';
+            %>
+
+            <%- include ('form') %>
+
+        </div>
+    </div>
+
+    <button class="btn-fechar js-close-modal"><i class="icon-close"></i></button>
+</div>

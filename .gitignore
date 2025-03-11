@@ -1,0 +1,6 @@
+node_modules
+public/*
+!public/.htaccess
+!public/robots*.txt
+!public/web.config
+package-lock.json

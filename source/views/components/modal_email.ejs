@@ -1,0 +1,24 @@
+<div class="modal-contato" data-modal-contato="email">
+    <div class="modal-contato-scroll">
+        <div class="container">
+            
+            <h3 class="modal-contato-tit">
+                <img src="images/logo.png" alt="<%= nome %>">
+                Envie um e-mail
+            </h3>
+
+            <%
+            form_nome = 'formModalEmail';
+            form_prefixo = 'FME';
+            form_tipo = 'Email';
+            form_canal = 'mensagem';
+            form_btn = 'Enviar';
+            %>
+
+            <%- include ('form') %>
+
+        </div>
+    </div>
+
+    <button class="btn-fechar js-close-modal"><i class="icon-close"></i></button>
+</div>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%=description%>">
+    <title><%=title%></title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PSBS4DS');</script>
+        <!-- End Google Tag Manager -->
+
+    <% if (GA != '') { %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= GA %>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '<%= GA %>');
+    </script>
+    <% } %>
+
+    <% if (facebook != '') { %>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '<%= facebook %>');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=<%= facebook %>&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <% } %>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSBS4DS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <%- include ('components/header') %>
+    
+    <main>
+
+        <%- include ('components/intro') %>
+        <%- include ('components/conversao') %>
+        <%- include ('components/video') %>
+        <%- include ('components/escolha') %>
+        <%- include ('components/doc') %>
+        <%- include ('components/empreendimentos') %>
+        <%- include ('components/lazer') %>   
+        <%- include ('components/apartamento') %>   
+        <%- include ('components/plantas') %>   
+        <%- include ('components/localizacao') %>
+        <%- include ('components/realizacao') %>     
+        <%- include ('components/contato') %>
+
+        <div class="modal fade" id="politicaModal" tabindex="-1" aria-labelledby="politicaModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="politicaModalLabel">Termo de Consentimento</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Estou ciente e de acordo</strong> em disponibilizar meus dados pessoais para obtenção de informações sobre o empreendimento D.O.C Vila Nova Conceição e de que os dados coletados poderão ser compartilhados com as empresas parceiras listadas neste site, doravante denominadas somente como “Parceiras”, para fins promocionais, publicitários e estatísticos relacionados à comercialização de imóveis.</p>
+                        <p><strong>utorizo que a RYPE SPE 17 - EMPREENDIMENTO IMOBILIÁRIO LTDA e/ou suas Parceiras, como definido anteriormente, utilizem os meus dados pessoais para a finalidade exclusiva de utilização dos dados para a oferta deste e de outros empreendimentos e venda de imóveis.</strong></p>
+                        <p><strong>Estou ciente</strong> de que este consentimento serve para atendimento aos requisitos da Lei nº 13.709/18 (Lei Geral de Proteção de Dados) e, a qualquer momento, poderei revogá-lo, devendo comunicar a decisão pelo e-mail <a href="mailto:dtmmkt@ryazbek.com.br">dtmmkt@ryazbek.com.br</a>.</p>
+                    </div>
+                    <div class="modal-footer">    
+                        <button type="button" class="btn-form" data-bs-dismiss="modal">
+                            <span class="txt">Fechar </span>                    
+                            <span class="icon-check icon-hover"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        
+    </main>
+
+
+    <%- include ('components/modal_email') %>
+    <%- include ('components/modal_chat') %>
+    <%- include ('components/modal_whatsapp') %>
+    <%- include ('components/modal_telefone') %>
+    <%- include ('components/modal_map') %>
+    <%- include ('components/footer') %>
+   
+    <script src="js/main.js"></script>
+    <script src="https://script.hubid360.com.br/js?id=<%=hubid%>" async></script>
+</body>
+</html>

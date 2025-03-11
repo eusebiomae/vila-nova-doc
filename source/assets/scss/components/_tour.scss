@@ -1,0 +1,27 @@
+.tour{
+
+    .ratio{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    &-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        background: #ccc;
+        font-size: 48px;
+        transition: all .2s ease-in-out;
+
+        &.hide{
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        @include media-breakpoint-up(lg){
+            font-size: 72px;
+        }
+
+    }
+}

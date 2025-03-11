@@ -1,0 +1,54 @@
+<% 
+    form_email = form_tipo == 'Email';
+%> 
+<div class="form">
+    <form action="javascript:" id="<%= form_nome %>" name="<%= form_nome %>" data-tipo="<%= form_tipo %>" data-hubid-form="<%= form_canal %>" novalidate>
+       
+        <% if(form_email) { %>
+        <div class="form-group">
+            <label for="<%= form_prefixo %>_Contato" class="form-label">Por onde podemos conversar?</label>
+            <select name="Forma_de_Contato" id="<%= form_prefixo %>_Contato" class="form-select js-select-contato" required>
+                <option value="" selected>Escolha uma opção de contato</option>
+                <option value="Email">E-mail</option>
+                <option value="Whatsapp" data-tel-required>Whatsapp</option>
+                <option value="Telefone" data-tel-required>Telefone</option>
+            </select>
+            <div class="invalid-feedback">Escolha uma forma de contato.</div>
+        </div>
+        <% } %>
+
+        <div class="form-group">
+            <label for="<%= form_prefixo %>_Nome" class="form-label">Qual o seu nome?</label>
+            <input type="text" name="Nome" id="<%= form_prefixo %>_Nome" class="form-control" required>
+            <div class="invalid-feedback">Digite seu nome.</div>
+        </div>
+        <div class="form-group">
+            <label for="<%= form_prefixo %>_Email" class="form-label">Poderia nos informar um e-mail?</label>
+            <input type="email" name="Email" id="<%= form_prefixo %>_Email" class="form-control" required>
+            <div class="invalid-feedback">Digite um e-mail válido.</div>
+        </div>
+        <div class="form-group">
+            <label for="<%= form_prefixo %>_Tel" class="form-label">E um telefone para contato? <% if(form_email) { %><span>(opcional)</span><%}%></label>
+            <input type="tel" name="Telefone" id="<%= form_prefixo %>_Tel" class="form-control" pattern=".{14,15}" maxlength="15" data-mask="tel" <% if(!form_email) { %>required<%}%> >
+            <div class="invalid-feedback">Digite um telefone válido.</div>
+        </div>
+        
+        <% if(form_email) { %>
+        <div class="form-group">
+            <label for="<%= form_prefixo %>_Mensagem" class="form-label">Mensagem</label>
+            <textarea class="form-control" name="Mensagem" id="<%= form_prefixo %>_Mensagem" cols="30" rows="3" required>Olá, gostaria de receber mais informações sobre o <%=nome%>.</textarea>
+            <div class="invalid-feedback">Digite uma mensagem.</div>
+        </div>
+        <% } %>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Aceito" name="Termo_Consentimento" id="defaultCheck1" required>
+            <label class="form-check-label" for="defaultCheck1">
+                Concordo com o <a href="#" class="text-secondary" data-bs-toggle="modal" data-bs-target="#politicaModal">Termo de Consentimento</a> <br> para utilização de dados pessoais.
+            </label>
+            <div class="invalid-feedback">Leia e aceite o Termo de Consentimento.</div>
+        </div>
+        
+        <button type="submit" class="btn-form"><%= form_btn %></button>
+    </form>
+</div>

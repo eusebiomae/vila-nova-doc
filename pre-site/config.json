@@ -1,0 +1,54 @@
+{ 
+    "nome": "D.O.C Vila Nova Conceição",
+    "title": "Apartamentos à venda na Vila Nova Conceição | R.Yazbek",
+    "description": "Compre seu novo apartamento a 100m da Praça Pereira Coutinho, plantas de 195 m², 3 suítes e 3 vagas. Clique.",
+    "GA": "UA-48120781-10",
+    "facebook": "361191562298515",
+    "hubid": "d3d9446802425",
+    "telefone": "(11) 9999-9999",
+    "galerias": [
+        {
+            "size_thumb": {"w": 1140, "h": 440},
+            "size_thumb_mob": {"w": 480, "h": 320},
+            "path": "images/apto/",
+            "legendas": [
+                "Imagem 1",
+                "Imagem 2",
+                "Imagem 3",
+                "Imagem 4"
+            ]
+        },
+        {
+            "size_thumb": {"w": 1140, "h": 440},
+            "size_thumb_mob": {"w": 480, "h": 320},
+            "path": "images/galeria_nova/",
+            "legendas": [
+                "Imagem 1",
+                "Imagem 2",
+                "Imagem 3",
+                "Imagem 4"
+            ]
+        },
+        {
+            "size_thumb": {"w": 830, "h": 530},
+            "size_thumb_mob": {"w": 480, "h": 320},
+            "path": "images/lazer/",
+            "legendas": [
+                "Imagem 1",
+                "Imagem 2",
+                "Imagem 3",
+                "Imagem 4"
+            ]
+        },
+        {
+            "size_thumb": {"w": 600,"h": 0},
+            "size_thumb_mob": {"w": 480,"h": 0},
+            "path": "images/plantas/",
+            "legendas": [
+                "Planta 25 m²",
+                "Planta 30 m²",
+                "Planta 40 m²"
+            ]
+        }
+    ]
+}

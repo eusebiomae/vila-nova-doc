@@ -1,0 +1,18 @@
+<section class="contato" id="contato">
+    <div class="container">
+        <div class="contato-intro">
+            <h1 class="contato-form-tit">Faça seu cadastro e receba informações em primeira mão.</h1>
+            <p class="contato-form-subtit">Você poderá mudar as suas permissões de <br> comunicação a qualquer momento. </p>
+        </div>
+
+        <%
+        form_nome = 'formEmail';
+        form_prefixo = 'FE';
+        form_tipo = 'Email';
+        form_canal = 'mensagem';
+        form_btn = 'Enviar';
+        %>
+        <%- include ('form') %>
+
+    </div>
+</section>

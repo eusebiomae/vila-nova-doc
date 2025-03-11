@@ -1,0 +1,24 @@
+<div class="splide splide-images">
+    <div class="splide__track">
+        <div class="splide__list">
+            <% 
+            galerias[index_galeria].itens.forEach(function(image, i){
+                src = galerias[index_galeria].path + 'thumbs/' + image.file;
+                src_mob = galerias[index_galeria].path + 'thumbs/mob/' + image.file;
+                src_ampliada = galerias[index_galeria].path + image.file;
+            %>               
+            <div class="splide__slide">
+                <figure>
+                    <a href="<%=src_ampliada%>" class="js-zoom" data-zoom-size="<%=image.w%>x<%=image.h%>" data-zoom-index="<%=i%>" data-zoom-group="galeria_<%=index_galeria%>">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="<%=src_mob%>">
+                            <img data-splide-lazy="<%=src%>" alt="<%=galerias[index_galeria].legendas[i]%>">
+                        </picture>
+                    </a>                   
+                    <figcaption><%=galerias[index_galeria].legendas[i]%></figcaption>
+                </figure>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>

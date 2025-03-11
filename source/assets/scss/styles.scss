@@ -1,0 +1,69 @@
+
+@import "variables";
+
+@import "bs-config";
+
+// ICOMOON
+@import '../icomoon/style';
+
+@import '@splidejs/splide/dist/css/splide-core.min.css';
+
+@import "global";
+
+// PHOTOSWIPE
+@import "photoswipe/src/css/main"; 
+@import "photoswipe/src/css/default-skin/default-skin";
+
+@import 'components/header';
+@import 'components/intro';
+@import 'components/escolha';
+@import 'components/doc';
+@import 'components/empreendimentos';
+@import 'components/lazer';
+@import 'components/apartamento';
+@import 'components/plantas';
+@import 'components/localizacao';
+@import 'components/video';
+@import 'components/tour';
+@import 'components/contato';
+@import 'components/realizacao';
+@import 'components/conversao';
+@import 'components/modal';
+@import 'components/footer';
+
+@font-face {
+    font-family: 'HurmeGeometricSans';
+    src: url('#{$icomoon-font-path}/HurmeGeometricSans2-Light.woff2') format('woff2'),
+        url('#{$icomoon-font-path}/HurmeGeometricSans2-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HurmeGeometricSans';
+    src: url('#{$icomoon-font-path}/HurmeGeometricSans2-Regular.woff2') format('woff2'),
+        url('#{$icomoon-font-path}/HurmeGeometricSans2-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HurmeGeometricSans';
+    src: url('#{$icomoon-font-path}/HurmeGeometricSans2-SemiBold.woff2') format('woff2'),
+        url('#{$icomoon-font-path}/HurmeGeometricSans2-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HurmeGeometricSans';
+    src: url('#{$icomoon-font-path}/HurmeGeometricSans2-Black.woff2') format('woff2'),
+        url('#{$icomoon-font-path}/HurmeGeometricSans2-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

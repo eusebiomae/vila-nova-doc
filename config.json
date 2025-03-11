@@ -1,0 +1,47 @@
+{ 
+    "nome": "D.O.C Vila Nova Conceição",
+    "title": "Apartamentos à venda na Vila Nova Conceição | R.Yazbek",
+    "description": "Compre seu novo apartamento a 100m da Praça Pereira Coutinho, plantas de 195 m², 3 suítes e 3 vagas. Clique.",
+    "GA": "UA-48120781-10",
+    "facebook": "361191562298515",
+    "hubid": "d3d9446802425",
+    "telefone": "(11) 3044-1929",
+    "galerias": [
+        {
+            "size_thumb": {"w": 904, "h": 503},
+            "size_thumb_mob": {"w": 480, "h": 320},
+            "path": "images/lazer/",
+            "legendas": [
+                "Perspectiva Ilustrada do Lobby",
+                "Perspectiva Ilustrada do Bicicletário",
+                "Perspectiva Ilustrada do Playground",
+                "Perspectiva Ilustrada do Salão de Festas",
+                "Perspectiva Ilustrada da Brinquedoteca",
+                "Perspectiva Ilustrada do Fitness",
+                "Perspectiva Ilustrada da Praça Funcional",
+                "Perspectiva Ilustrada do Lounge Externo",
+                "Perspectiva Ilustrada do Solarium",
+                "Perspectiva Ilustrada da Piscina Externa"
+            ]
+        },
+        {
+            "size_thumb": {"w": 904, "h": 503},
+            "size_thumb_mob": {"w": 480, "h": 320},
+            "path": "images/apto/",
+            "legendas": [
+                "Perspectiva Ilustrada do Living",
+                "Perspectiva Ilustrada da Suíte Master Ampliada"
+            ]
+        },
+        {
+            "size_thumb": {"w": 600,"h": 0},
+            "size_thumb_mob": {"w": 480,"h": 0},
+            "path": "images/plantas/",
+            "legendas": [
+                "195m² - 3 Suítes",
+                "195m² - 2 Suítes - Opção Suíte Master",
+                "195m² - 2 Suítes - Opção Sala Ampliada"
+            ]
+        }
+    ]
+}

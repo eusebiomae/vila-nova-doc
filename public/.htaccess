@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # ROBOTS
+    RewriteCond %{HTTP_HOST} \.dev\.
+    RewriteRule ^robots\.txt /robots-hlog.txt [NC,L]
+</IfModule>
